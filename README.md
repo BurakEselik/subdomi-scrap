@@ -9,8 +9,7 @@ This program takes a valid domain address and gives subdomains of it.
 
 ## how to install? 
 
-    'pip install subdomi-scrap'
-
+    pip install subdomi-scrap
 
 ## how to use?
 
