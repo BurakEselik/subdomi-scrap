@@ -1,0 +1,19 @@
+++++++++++++++++++
+subdomi-scrap News
+++++++++++++++++++
+
+
+What is New in subdomi-scrap 1.1.0?
+===================================
+
+*Realese date: 2021-07-23
+
+Changed file name(subdomiscrap.py > __main__.py) thus fixed not working
+issue in terminal
+
+
+The usage pattern in readme.md has been rearranged. 
+
+Added install_requires =
+    		bs4
+    		requests    in setup.cfg thus requires pacgages installing automatical.
