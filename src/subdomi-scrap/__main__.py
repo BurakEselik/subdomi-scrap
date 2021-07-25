@@ -16,6 +16,7 @@ Medhod : via scrap from crt.sh thus your ip address or your id is being non-visi
 '''
 stop_threads = False
 
+
 class NetworkHand:
     BASE_URL = 'https://crt.sh/?q='
 
@@ -36,7 +37,6 @@ class NetworkHand:
         if check_domain(domain):
             domain = domain[find_first_dot_of(domain)() + 1:]
         return domain
-
 
     def get_responce(self):
         global stop_threads
@@ -74,7 +74,7 @@ class ParseHand:
         :returns: : 
         '''
         tdList = []
-        
+
         all_td = self.soup_parse(self.network_1.get_responce()).find_all('td')
         for td in all_td:
             if td.attrs.get('class') or td.attrs.get('style'):
@@ -130,7 +130,7 @@ class FileHand:
             print('\n\n..Succesfully..')
             print(f'Check this adress: {self.location}')
 
-  
+
 def print_d(text='\nPlease Wait', delay=.5):
     print(end=text)
     n_dots = 0
@@ -148,7 +148,9 @@ def print_d(text='\nPlease Wait', delay=.5):
             n_dots += 1
         sleep(delay)
 
+
 t1 = threading.Thread(target=print_d)
+
 
 def get_check_os() -> str:
     '''
@@ -185,7 +187,8 @@ def user_args_fun() -> tuple:
     path_default = merge_paths([str(Path.home()), 'Desktop'])
     file_name_default = 'file_name'
 
-    parser = argparse.ArgumentParser(description=description, prog='subdomi-scrap')
+    parser = argparse.ArgumentParser(
+        description=description, prog='subdomi-scrap')
     parser.add_argument('-d', '--domain', help=domanin_help,
                         default='https:\\www.youtube.com', type=str)
     parser.add_argument('-o', '--outfile', help=outfile_help,
